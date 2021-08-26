@@ -36,4 +36,4 @@ else:
 
 st.write("Courtesy: 1littlecoder Youtube Channel - [Sketch Code](https://github.com/amrrs/youtube-r-snippets/blob/master/Create_a_Pencil_Sketch_Portrait_with_Python_OpenCV.ipynb)")
 
-st.markdown("![](https://mms.businesswire.com/media/20200616005364/en/798639/23/Streamlit_Logo_%281%29.jpg =200x200)")
+st.markdown("![](https://mms.businesswire.com/media/20200616005364/en/798639/23/Streamlit_Logo_%281%29.jpg=200x200)")
