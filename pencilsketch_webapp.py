@@ -19,12 +19,13 @@ st.write("This Web App is to help convert your photos to realistic Pencil Sketch
 
 # collect the user input 
 
-file_image = st.sidebar.file_uploader("Upload your Photos", type=['jpeg','jpg','png'])
+#file_image = st.sidebar.file_uploader("Upload your Photos", type=['jpeg','jpg','png'])
 
-if file_image is None:
-    st.write("You haven't uploaded any image file")
+# collecting the input image from user camera 
 
-else:
+file_image = st.camera_input(label = "Take a pic of you to be sketched out")
+
+if file_image:
     input_img = Image.open(file_image)
     final_sketch = pencilsketch(np.array(input_img))
     one, two = st.columns(2)
@@ -38,6 +39,11 @@ else:
         im_pil = Image.fromarray(final_sketch)
         im_pil.save('final_image.jpeg')
         st.write('Download completed')
+   
+
+else:
+     st.write("You haven't uploaded any image file")
+   
 
 st.write("Courtesy: 1littlecoder Youtube Channel - [Sketch Code](https://github.com/amrrs/youtube-r-snippets/blob/master/Create_a_Pencil_Sketch_Portrait_with_Python_OpenCV.ipynb)")
 
